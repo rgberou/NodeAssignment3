@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= pageTitle %></title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+	<header class="main-header">
+		<nav class="main-header__nav">
+			<ul class="main-header__item-list">
+				<li class="main-header__item" ><a href="/" class="<%= path==='/' ? 'active':'' %>">Home</a></li>
+				<li class="main-header__item"><a href="/admin/add-user" class="<%= path==='/admin/add-User' ? 'active':'' %>">Add-User</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<form class="product-form" action="/admin/add-user" method="POST">
+			<div class="form-control">
+				<label for="title">User Name</label>
+				<input type="text" name="userName"/>		
+			</div>
+			<input type="submit" name="submitBtn" value="Submit" />		
+		</form>
+	</main>
+</body>
+</html>
